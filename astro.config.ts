@@ -35,7 +35,7 @@ export default defineStackbitConfig({
   ],
   models: {
     page: { type: "page", urlPath: "/{slug}" },
-    post: { type: "post", urlPath: "/{slug}" }
+    post: { type: "post", urlPath: "/blog/{slug}" }
   },
   modelExtensions: [
     // Static URL paths derived from the model's "slug" field
@@ -72,6 +72,5 @@ export default defineStackbitConfig({
       })
       .filter(Boolean) as SiteMapEntry[];
   }
-});
 });
 
